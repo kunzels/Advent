@@ -1,5 +1,7 @@
 require "byebug"
 
+#  current.join(",")
+
 # def opCode(code)
 # i = 0
 # tempNoun = code[1]
