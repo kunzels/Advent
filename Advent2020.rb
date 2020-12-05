@@ -1,6 +1,41 @@
 require "byebug"
 
-# This can def be optimized and reconsidered.  But time, gotta read ctci...
+
+# def seatFind(arr)
+#     # result = -1
+#     result = []
+#     arr.each do |pass|
+#         row = -1
+#         col = -1
+#         low, high = 0, 127
+#         pass[0..6].each_char do |char|
+#             high = (high + low) / 2 if char == "F"        
+#             low = (high + low) / 2 + 1 if char == "B"
+#         end
+#         row = high
+#         low, high = 0, 7
+#         pass[7..-1].each_char do |char|
+#             high = (high + low) / 2 if char == "L"        
+#             low = (high + low) / 2 + 1 if char == "R"
+#         end 
+#         col = high
+#         result << ((row * 8) + col)
+#         # result = ((row * 8) + col) if ((row * 8) + col) > result
+#     end
+#     result = result.sort
+#     i = result.min
+#     result.each do |id|
+#         if id != i
+#             puts i
+#             break
+#         end
+#         i += 1
+#     end
+# end
+# data = "".split("\n")
+
+# seatFind(data)
+
 
 # def passports(data)
 #     newData = data.map! {|passport| passport.split(" ")}
@@ -76,18 +111,17 @@ require "byebug"
 # puts passports(data)
 
 # def toboggan(data, right, down)
-    
 #     count = 0
 #     col = 0
 #     row = 0
 #     while row < data.length - down
-#         if col + right > 30
-#             col = col + right - 31 
-#             row += down
-#         else
-#             col += right
-#             row += down
-#         end
+#       if col + right > 30
+#         col = col + right - 31 
+#         row += down
+#       else
+#         col += right
+#         row += down
+#       end
 #         count += 1 if data[row][col] == "#"
 #     end
 #     return count
