@@ -1,4 +1,29 @@
 require "byebug"
+require 'set'
+
+#Set used for any yes answers, hash used for all yes answers.
+# def customCustoms(data)
+#     result = 0
+#     data.each do |group|
+#         arr = group.split("\n")
+#         # checker = Set[]
+#         checker = Hash.new(0)
+#         arr.each do |person|
+#             person.each_char do |char|
+#                 checker[char] += 1
+#             end
+#         end
+#         checker.each do |k, v|
+#             result += 1 if v == arr.length
+#         end
+#     end
+#     puts result
+# end
+
+
+# data = "".split("\n\n")
+# customCustoms(data)
+
 
 
 # def seatFind(arr)
