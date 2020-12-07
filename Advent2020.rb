@@ -1,6 +1,71 @@
 require "byebug"
 require 'set'
 
+
+
+# Needs improvement when time permits. Revisit using hash or recursive tree with memoization.
+# def handy2(data)
+#     directBags = ["shiny gold"]
+#     count = 0
+#     searched = []
+#     while !directBags.empty?
+#         searching = directBags.pop
+#         if searching[-1] == " "
+#             searching = searching[0...-1]
+#         end
+#             data.each do |rule|
+#                 conditions = rule.split("contain")
+#                 holder = conditions[0][0..-7]
+#                 held = conditions[1].split(',') 
+#                 if holder == searching && held != " no other bags."
+#                     held.each do |item|
+#                         if item[1] == "1"
+#                             directBags << item[3..-5]
+#                             count += 1
+#                         else
+#                             item[1].to_i.times do 
+#                                 directBags << item[3..-6]
+#                                 count += 1
+#                             end
+#                         end
+#                     end
+#                     break
+#                 end
+#             end
+#     end
+#     puts count
+# end
+# data = "".split("\n")
+# handy2(data)
+
+# def handy(data)
+#     directBags = ["shiny gold"]
+#     count = 0
+#     searched = []
+#     while !directBags.empty?
+        
+#         searching = directBags.pop
+#         if !searched.include?(searching)
+#             data.each do |rule|
+#                 conditions = rule.split("contain")
+#                 holder = conditions[0][0..-7]
+#                 held = conditions[1]
+#                 if held.include?(searching) && !searched.include?(holder) && !directBags.include?(holder)
+#                     directBags << holder
+#                     count += 1
+#                 end
+#             end
+#           searched << searching
+#         end
+#     end
+#     puts count
+# end
+
+# handy2(data)
+
+#problem  
+
+
 #Set used for any yes answers, hash used for all yes answers.
 # def customCustoms(data)
 #     result = 0
