@@ -8,20 +8,13 @@ require 'set'
 #   while result == false
 #     changedData = data.dup
 #     data.each_with_index do |code, idx|
-#       if !checked.include?(idx)
+#       test = code.split(" ")
+#       if !checked.include?(idx) && (test[0] == "nop" || test[0] == "jmp")
 #         checked[idx] = true
-#         test = code.split(" ")
-#         if test[0] == "jmp"
-#           test = "nop" + " " + test[1]
-#           changedData[idx] = test
-#           result = accumOrFalse(changedData)
-#           break
-#         elsif test[0] == "nop"
-#           test = "jmp" + " " + test[1]
-#           changedData[idx] = test
-#           result = accumOrFalse(changedData)
-#           break
-#         end   
+#         test[0] == "jmp" ? test = "nop" + " " + test[1] : test = "jmp" + " " + test[1]
+#         changedData[idx] = test
+#         result = accumOrFalse(changedData)
+#         break 
 #       end 
 #     end
 #   end
@@ -60,7 +53,6 @@ require 'set'
 #       end
 #     return accum
 # end
-
 # data = "".split("\n")
 # handheld(data)
 
