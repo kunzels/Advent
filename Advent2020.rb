@@ -3,7 +3,113 @@ require 'set'
 
 
 
-# Needs improvement when time permits. Revisit using hash or recursive tree with memoization.
+
+
+
+
+# hashes and helper method
+# def handheld(data)
+#   unchangedData = data.dup
+#   changedData = data.dup
+#   checked = {}
+#   result = completed(changedData)
+  
+#   while result == false
+#     changedData = unchangedData.dup
+#     unchangedData.each_with_index do |code, idx|
+#       if !checked.include?(idx)
+#         checked[idx] = true
+#         test = code.split(" ")
+#         if test[0] == "jmp"
+#           test = "nop" + " " + test[1]
+#           changedData[idx] = test
+#           result = completed(changedData)
+#           break
+#         elsif test[0] == "nop"
+#           test = "jmp" + " " + test[1]
+#           changedData[idx] = test
+#           result = completed(changedData)
+#           break
+#         end   
+#       end 
+#     end
+#   end
+#   puts result
+# end
+
+# def completed(data)
+#     accum = 0
+#     visited = {}
+#     i = 0
+#       while i < data.length
+#         code = data[i].split(" ")
+#         if code[0] === "acc"
+#           accum += code[1].to_i
+#           if visited[i + 1]
+#             return false
+#           else
+#             visited[i] = true
+#             i += 1
+#           end
+#         elsif code[0] == "nop"
+#           if visited[i + 1]
+#             return false
+#           else
+#             visited[i] = true
+#             i += 1
+#           end
+#         elsif code[0] == "jmp"
+#           if visited[i + code[1].to_i]
+#             return false
+#           else
+#             visited[i] = true
+#             i += code[1].to_i
+#           end
+#         end
+#       end
+#     return accum
+# end
+# data = "".split("\n")
+# handheld(data)
+
+# def handheld(data)
+#   accum = 0
+#   visited = {}
+#   i = 0
+
+#     while i < data.length
+#       code = data[i].split(" ")
+#       if code[0] === "acc"
+#         accum += code[1].to_i
+#         if visited[i + 1]
+#           puts accum
+#           break
+#         else
+#           visited[i] = true
+#           i += 1
+#         end
+#       elsif code[0] == "nop"
+#         if visited[i + 1]
+#           puts accum
+#           break
+#         else
+#           visited[i] = true
+#           i += 1
+#         end
+#       elsif code[0] == "jmp"
+#         if visited[i + code[1].to_i]
+#           puts accum
+#           break
+#         else
+#           i += code[1].to_i
+#         end
+#       end
+#     end
+#     puts accum
+# end
+
+# handheld(data)
+# Needs improvement when time permits. Revisit using better ds.
 # def handy2(data)
 #     directBags = ["shiny gold"]
 #     count = 0
