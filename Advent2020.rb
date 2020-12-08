@@ -2,33 +2,24 @@ require "byebug"
 require 'set'
 
 
-
-
-
-
-
-# hashes and helper method
 # def handheld(data)
-#   unchangedData = data.dup
-#   changedData = data.dup
 #   checked = {}
-#   result = completed(changedData)
-  
+#   result = accumOrFalse(data)
 #   while result == false
-#     changedData = unchangedData.dup
-#     unchangedData.each_with_index do |code, idx|
+#     changedData = data.dup
+#     data.each_with_index do |code, idx|
 #       if !checked.include?(idx)
 #         checked[idx] = true
 #         test = code.split(" ")
 #         if test[0] == "jmp"
 #           test = "nop" + " " + test[1]
 #           changedData[idx] = test
-#           result = completed(changedData)
+#           result = accumOrFalse(changedData)
 #           break
 #         elsif test[0] == "nop"
 #           test = "jmp" + " " + test[1]
 #           changedData[idx] = test
-#           result = completed(changedData)
+#           result = accumOrFalse(changedData)
 #           break
 #         end   
 #       end 
@@ -37,7 +28,7 @@ require 'set'
 #   puts result
 # end
 
-# def completed(data)
+# def accumOrFalse(data)
 #     accum = 0
 #     visited = {}
 #     i = 0
@@ -69,6 +60,7 @@ require 'set'
 #       end
 #     return accum
 # end
+
 # data = "".split("\n")
 # handheld(data)
 
