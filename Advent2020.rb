@@ -1,6 +1,54 @@
 require "byebug"
 require 'set'
 
+#Side problem, just including for fun.
+
+# def travel(airports, routes, starting)
+#     connections = connectionsConnected(airports, routes)
+#     connections = connections.sort_by{|k,v| -v.length}.to_h
+#     current = connections[starting]
+#     count = 0
+#     connections.each do |k, v|
+#         test = current + v
+#         if test.length > current.length
+#             puts test
+#             count += 1
+#             current += v
+#         end
+#     end
+    # connections.each do |k, v|
+    #     puts k
+    #     puts v 
+    #     puts "----"
+    # end
+    
+#     puts count += (airports.length - current.length)
+# end
+
+# def connectionsConnected(airports, routes)
+#     connections = {}
+#     airports.each do |port|
+#         connections[port] = Set[]
+#     end
+#     routes.each do |route|
+#         start = route[0]
+#         ending = route[1]
+#         connections[start] << ending
+#         connections[start] << start
+#     end
+#     connections.each_with_index do |(k, v), idx|
+#         connections.each_with_index do |(k2, v2), idx2|
+#             if v2.include?(k)
+#                 connections[k2] += connections[k]
+#             end
+#         end
+#     end
+#     return connections
+# end
+
+# travel(airports, routes, "LGA")
+
+
 
 # def handheld(data)
 #   checked = {}
@@ -53,6 +101,7 @@ require 'set'
 #       end
 #     return accum
 # end
+
 # data = "".split("\n")
 # handheld(data)
 
