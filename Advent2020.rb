@@ -1,7 +1,49 @@
 require "byebug"
 require 'set'
 
-#Side problem, just including for fun.
+
+# def encoding(data)
+#     start = 0
+#     i = 24
+#     toCheck = data[i + 1]
+#     checked = true
+#     while checked == true
+#         checked = false
+#         number = nil
+#         data[start..i].each do |num|
+#             number = num
+#             if data[start..i].include?(toCheck - num)
+#                 start += 1
+#                 i += 1
+#                 toCheck = data[i + 1]
+#                 checked = true
+#                 break
+#             end
+#         end
+#          if checked == false
+#             start = 0
+#             total = 0
+#             while total < toCheck
+#                 data[start..-1].each_with_index do |num, idx|
+#                     total += num
+#                     if total == toCheck
+#                         data = data[start..(start + idx)].sort
+#                         return data[0] + data[-1]
+#                     elsif total > toCheck
+#                         total = 0
+#                         start += 1
+#                         queue = data[start..-1]
+#                         break
+#                     end
+#                 end
+#             end
+#         end
+#     end
+# end
+# data = "".split("\n").map{|el| el.to_i}
+# print encoding(data)
+
+#Side problem, just including for fun. Airport connections, take in airport, connect to all other airports. 
 
 # def travel(airports, routes, starting)
 #     connections = connectionsConnected(airports, routes)
