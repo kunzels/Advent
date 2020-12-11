@@ -2,6 +2,58 @@ require "byebug"
 require 'set'
 
 
+
+
+# def adapter(data)
+#     total = 0
+#     countOne = 0
+#     countThree = 0
+#     while total < data.max
+#         if data.include?(total + 1)
+#             total += 1
+#             countOne += 1
+#         elsif data.include?(total + 2)
+#             total += 1
+#         elsif data.include?(total + 3)
+#             total += 3
+#             countThree += 1
+#         end
+#     end
+#     puts countOne * (countThree + 1)
+# end 
+
+# def possibilities(data)
+#     tabbed = [nil,nil,nil,1]
+#     debugger
+#     data.each { |i| tabbed[i+3] = tabbed[i..i+2].compact.sum }
+#     puts tabbed.last
+
+    # return memo[target] if memo[target] > 0
+    # # return 0 if data == nil || target == nil
+    # return 1 if (!data.include?(target - 1) && !data.include?(target - 2) && !data.include?(target - 3))
+    
+    # if data.include?(target - 1)
+    #     idx = data.find_index(target - 1)
+    #     memo[target] += possibilities(data[(idx + 1)..-1], data[idx], memo)
+    # end
+    # if data.include?(target - 2)
+    #     idx = data.find_index(target - 2)
+    #     memo[target] += possibilities(data[(idx + 1)..-1], data[idx], memo)
+    # end
+    # if data.include?(target - 3)
+    #     idx = data.find_index(target - 3)
+    #     memo[target] += possibilities(data[(idx + 1)..-1], data[idx], memo)
+    # end
+    # puts memo
+    # return memo[target] 
+# end
+
+# adapter(data)
+# data = "".split("\n").map{|el| el.to_i}
+# puts possibilities(data.sort)
+
+
+
 # def encoding(data)
 #     start = 0
 #     i = 24
