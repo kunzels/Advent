@@ -3,7 +3,6 @@ require 'set'
 
 
 
-
 # def adapter(data)
 #     total = 0
 #     countOne = 0
@@ -22,11 +21,14 @@ require 'set'
 #     puts countOne * (countThree + 1)
 # end 
 
+# Tabulation made this easier.
+
 # def possibilities(data)
 #     tabbed = [nil,nil,nil,1]
-#     debugger
 #     data.each { |i| tabbed[i+3] = tabbed[i..i+2].compact.sum }
 #     puts tabbed.last
+ 
+    # Old attempt at memo.  Revisit.
 
     # return memo[target] if memo[target] > 0
     # # return 0 if data == nil || target == nil
@@ -47,12 +49,9 @@ require 'set'
     # puts memo
     # return memo[target] 
 # end
-
-# adapter(data)
 # data = "".split("\n").map{|el| el.to_i}
+# adapter(data)
 # puts possibilities(data.sort)
-
-
 
 # def encoding(data)
 #     start = 0
