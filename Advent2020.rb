@@ -38,59 +38,6 @@ require 'set'
 # end
 # data = "".split("\n")
 # puts rainRisk(data)
-    # directions = ["east", "south", "west", "north"]
-    # facing = "east"
-    # facing2 = "north"
-    # eastWest = 0
-    # northSouth = 0
-    # waypointVer = 1
-    # waypointHor = 10
-    
-    # data.each do |movement|
-    #     move = movement[0]
-    #     amount = movement[1..].to_i
-    #     if move == "N"
-    #         waypointVer += amount
-    #     elsif move == "S"
-    #         waypointVer -= amount
-    #     elsif move == "E"
-    #         waypointHor += amount
-    #     elsif move == "W"
-    #         waypointHor -= amount
-    #     elsif move == "L"
-    #         (amount / 90).times do 
-    #             held = directions.pop
-    #             directions.unshift(held)
-    #         end
-    #         facing = directions[0]
-    #         facing2 = directions[-1]
-    #     elsif move == "R"
-    #         (amount / 90).times do 
-    #              held = directions.shift
-    #              directions.push(held)
-    #         end
-    #         facing = directions[0]
-    #         facing2 = directions[-1]
-    #     elsif move == "F"
-    #         amount.times do 
-    #             if facing == "east" 
-    #                 eastWest += waypointHor
-    #                 northSouth += waypointVer
-    #             elsif facing == "north"
-    #                 northSouth += waypointHor
-    #                 eastWest -= waypointVer
-    #             elsif facing == "west"
-    #                 eastWest -= waypointHor
-    #                 northSouth -= waypointVer
-    #             elsif facing == "south"
-    #                 northSouth -= waypointHor
-    #                 eastWest += waypointVer
-    #             end
-    #         end
-    #     end
-    # end
-    # return northSouth.abs + eastWest.abs
-# end
 
 #p1
 # def rainRisk(data)
