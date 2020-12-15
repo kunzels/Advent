@@ -1,28 +1,35 @@
 require "byebug"
 require 'set'
 
+###--------###
+### DAY 13 ###
+###--------###
 
+# def busSchedule(data)
+#     time = 0;
+#     stepSize = data[0]
 
-def busSchedule(data)
-    time = 0;
-    stepSize = data[0]
+#     i = 1
+#     while i < data.length
+#         bus = data[i]
+#         while (time + i) % bus != 0
+#             time += stepSize
+#         end
+#         stepSize *= bus
+#         i += 1
+#     end
+#     return time
+# end
 
-    i = 1
-    while i < data.length
-        bus = data[i]
-        while (time + i) % bus != 0
-            time += stepSize
-        end
-        stepSize *= bus
-        i += 1
-    end
-    return time
-end
-
+# I just reasoned part one by using some division, didn't write an algo.
 # Input contained x's.  Could have mapped, instead just brute replaced.
 # data = [19,1,1,1,1,1,1,1,1,41,1,1,1,1,1,1,1,1,1,521,1,1,1,1,1,1,1,23,1,1,1,1,1,1,1,1,17,1,1,1,1,1,1,1,1,1,1,1,29,1,523,1,1,1,1,1,37,1,1,1,1,1,1,13]
-puts busSchedule(data)
+# puts busSchedule(data)
 
+
+###--------###
+### DAY 12 ###
+###--------###
 
 # def rainRisk(data)
 #     waypoint = [1, 10]
@@ -128,6 +135,11 @@ puts busSchedule(data)
 #     result
 # end
 # find_missing_ranges([], 1, 1)
+
+###--------###
+### DAY 11 ###
+###--------###
+
 # data = "L.LL.LL.LL
 # LLLLLLL.LL
 # L.L.L..L..
@@ -144,6 +156,11 @@ puts busSchedule(data)
 # end
 
 # seating(data)
+
+###--------###
+### DAY 10 ###
+###--------###
+
 # def adapter(data)
 #     total = 0
 #     countOne = 0
@@ -194,6 +211,11 @@ puts busSchedule(data)
 # adapter(data)
 # puts possibilities(data.sort)
 
+
+###-------###
+### DAY 9 ###
+###-------###
+
 # def encoding(data)
 #     start = 0
 #     i = 24
@@ -235,7 +257,10 @@ puts busSchedule(data)
 # data = "".split("\n").map{|el| el.to_i}
 # print encoding(data)
 
-#Side problem, just including for fun. Airport connections, take in airport, connect to all other airports. 
+
+###------------------------------------------------------------------------------------------------------------###
+### Side problem, just including for fun. Airport connections, take in airport, connect to all other airports  ###
+###------------------------------------------------------------------------------------------------------------###
 
 # def travel(airports, routes, starting)
 #     connections = connectionsConnected(airports, routes)
@@ -282,7 +307,9 @@ puts busSchedule(data)
 
 # travel(airports, routes, "LGA")
 
-
+###-------###
+### DAY 8 ###
+###-------###
 
 # def handheld(data)
 #   checked = {}
@@ -377,6 +404,11 @@ puts busSchedule(data)
 
 # handheld(data)
 # Needs improvement when time permits. Revisit using better ds.
+
+###-------###
+### DAY 7 ###
+###-------###
+
 # def handy2(data)
 #     directBags = ["shiny gold"]
 #     count = 0
@@ -436,8 +468,10 @@ puts busSchedule(data)
 
 # handy2(data)
 
-#problem  
 
+###-------###
+### DAY 6 ###
+###-------###
 
 #Set used for any yes answers, hash used for all yes answers.
 # def customCustoms(data)
@@ -462,7 +496,9 @@ puts busSchedule(data)
 # data = "".split("\n\n")
 # customCustoms(data)
 
-
+###-------###
+### DAY 5 ###
+###-------###
 
 # def seatFind(arr)
 #     # result = -1
@@ -499,6 +535,10 @@ puts busSchedule(data)
 
 # seatFind(data)
 
+
+###-------###
+### DAY 4 ###
+###-------###
 
 # def passports(data)
 #     newData = data.map! {|passport| passport.split(" ")}
@@ -573,6 +613,12 @@ puts busSchedule(data)
 # data = ("").split("\n\n")
 # puts passports(data)
 
+
+###-------###
+### DAY 3 ###
+###-------###
+
+
 # def toboggan(data, right, down)
 #     count = 0
 #     col = 0
@@ -593,6 +639,11 @@ puts busSchedule(data)
 # data = ("").split("\n")
 
 # puts toboggan(data, 1, 2)
+
+
+###-------###
+### DAY 2 ###
+###-------###
 
 # def validPassTwo?(data)
 #     arr = data.split(",")
@@ -623,6 +674,11 @@ puts busSchedule(data)
 
 # Get data from site ^ 
 # require 'set' 
+
+
+###-------###
+### DAY 1 ###
+###-------###
 
 # def getterThree(arr)
 #     hash = {}
