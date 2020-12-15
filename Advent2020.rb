@@ -3,6 +3,179 @@ require 'set'
 
 
 
+# def rainRisk(data)
+#     waypoint = [1, 10]
+#     ship = [0, 0]
+#     data.each do |movement|
+#         move = movement[0]
+#         amount = movement[1..].to_i
+#         if move == "N" 
+#             waypoint[0] += amount
+#         elsif move == "E"
+#             waypoint[1] += amount
+#         elsif move == "S"
+#             waypoint[0] -= amount
+#         elsif move == "W"
+#             waypoint[1] -= amount
+#         elsif move == "R"
+#             (amount / 90).times do
+#                 hold = waypoint.pop
+#                 waypoint.unshift(-hold)
+#             end
+#         elsif move == "L"
+#             (amount / 90).times do
+#                 hold = waypoint.shift
+#                 waypoint.push(-hold)
+#             end
+#         elsif move == "F"
+#             amount.times do
+#                 ship[0] += waypoint[0]
+#                 ship[1] += waypoint[1]
+#             end
+#         end
+#     end
+#     return ship[0].abs + ship[1].abs
+# end
+# data = "".split("\n")
+# puts rainRisk(data)
+    # directions = ["east", "south", "west", "north"]
+    # facing = "east"
+    # facing2 = "north"
+    # eastWest = 0
+    # northSouth = 0
+    # waypointVer = 1
+    # waypointHor = 10
+    
+    # data.each do |movement|
+    #     move = movement[0]
+    #     amount = movement[1..].to_i
+    #     if move == "N"
+    #         waypointVer += amount
+    #     elsif move == "S"
+    #         waypointVer -= amount
+    #     elsif move == "E"
+    #         waypointHor += amount
+    #     elsif move == "W"
+    #         waypointHor -= amount
+    #     elsif move == "L"
+    #         (amount / 90).times do 
+    #             held = directions.pop
+    #             directions.unshift(held)
+    #         end
+    #         facing = directions[0]
+    #         facing2 = directions[-1]
+    #     elsif move == "R"
+    #         (amount / 90).times do 
+    #              held = directions.shift
+    #              directions.push(held)
+    #         end
+    #         facing = directions[0]
+    #         facing2 = directions[-1]
+    #     elsif move == "F"
+    #         amount.times do 
+    #             if facing == "east" 
+    #                 eastWest += waypointHor
+    #                 northSouth += waypointVer
+    #             elsif facing == "north"
+    #                 northSouth += waypointHor
+    #                 eastWest -= waypointVer
+    #             elsif facing == "west"
+    #                 eastWest -= waypointHor
+    #                 northSouth -= waypointVer
+    #             elsif facing == "south"
+    #                 northSouth -= waypointHor
+    #                 eastWest += waypointVer
+    #             end
+    #         end
+    #     end
+    # end
+    # return northSouth.abs + eastWest.abs
+# end
+
+#p1
+# def rainRisk(data)
+#     directions = ["east", "south", "west", "north"]
+#     facing = "east"
+#     eastWest = 0
+#     northSouth = 0
+#     data.each do |movement|
+#         move = movement[0]
+#         amount = movement[1..].to_i
+#         if move == "N"
+#             northSouth += amount
+#         elsif move == "S"
+#             northSouth -= amount
+#         elsif move == "E"
+#             eastWest += amount
+#         elsif move == "W"
+#             eastWest -= amount
+#         elsif move == "L"
+#             (amount / 90).times do 
+#                 held = directions.pop
+#                 directions.unshift(held)
+#             end
+#             facing = directions[0]
+#         elsif move == "R"
+#             (amount / 90).times do 
+#                 held = directions.shift
+#                 directions.push(held)
+#             end
+#             facing = directions[0]
+#         elsif move == "F"
+#             if facing == "east"
+#                 eastWest += amount
+#             elsif facing == "west"
+#                 eastWest -= amount
+#             elsif facing == "north"
+#                 northSouth += amount
+#             elsif facing == "south"
+#                 northSouth -= amount
+#             end
+#         end
+#     end 
+#     return eastWest.abs + northSouth.abs
+# end
+
+# puts rainRisk(data)
+# def find_missing_ranges(nums, lower, upper)
+#     starting = nil
+#     ending = nil
+#     result = []
+#     (lower..upper).each do |num|
+#         debugger
+#        if !nums.include?(num) && starting == nil
+#            starting = num
+#        elsif !nums.include?(num) && starting != nil
+#            ending = num
+#        elsif (nums.include?(num) && starting != nil) || num == upper
+#           if ending == nil
+#               result << starting.to_s 
+#           else
+#            result << starting.to_s + "->" + ending.to_s
+#           end
+#            starting = nil
+#            ending = nil
+#        end
+#     end
+#     result
+# end
+# find_missing_ranges([], 1, 1)
+# data = "L.LL.LL.LL
+# LLLLLLL.LL
+# L.L.L..L..
+# LLLL.LL.LL
+# L.LL.LL.LL
+# L.LLLLL.LL
+# ..L.L.....
+# LLLLLLLLLL
+# L.LLLLLL.L
+# L.LLLLL.LL".split("\n")
+
+# def seating(data)
+#     puts data
+# end
+
+# seating(data)
 # def adapter(data)
 #     total = 0
 #     countOne = 0
