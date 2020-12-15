@@ -3,6 +3,27 @@ require 'set'
 
 
 
+def busSchedule(data)
+    time = 0;
+    stepSize = data[0]
+
+    i = 1
+    while i < data.length
+        bus = data[i]
+        while (time + i) % bus != 0
+            time += stepSize
+        end
+        stepSize *= bus
+        i += 1
+    end
+    return time
+end
+
+# Input contained x's.  Could have mapped, instead just brute replaced.
+# data = [19,1,1,1,1,1,1,1,1,41,1,1,1,1,1,1,1,1,1,521,1,1,1,1,1,1,1,23,1,1,1,1,1,1,1,1,17,1,1,1,1,1,1,1,1,1,1,1,29,1,523,1,1,1,1,1,37,1,1,1,1,1,1,13]
+puts busSchedule(data)
+
+
 # def rainRisk(data)
 #     waypoint = [1, 10]
 #     ship = [0, 0]
