@@ -1,6 +1,35 @@
 require "byebug"
 require 'set'
 
+###--------###
+### DAY 15 ###
+###--------###
+nums = [12,1,16,3,11,0]
+
+def elfGame(nums)
+    (2020 - nums.length).times do
+        current = nums[-1]
+        if nums[0...-1].include?(current)
+            counter = 1
+            nums.reverse[1..-1].each do |num|
+                if num == nums[-1]
+                    nums << counter
+                    break
+                else
+                    counter += 1
+                end
+            end
+        else nums << 0
+        end
+    end
+    return nums[-1]
+end
+puts elfGame(nums)
+
+
+
+
+
 
 ###--------###
 ### DAY 14 ###
