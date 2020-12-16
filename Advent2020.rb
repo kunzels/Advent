@@ -2,6 +2,85 @@ require "byebug"
 require 'set'
 
 ###--------###
+### DAY 16 ###
+###--------###
+
+
+# def formater(rules)
+#     result = {}
+#     rules.each do |rule|
+#         held = rule.split(": ")
+#         nums = held[1].split(" or ")
+#         range1 = nums[0].split("-")
+#         range2 = nums[1].split("-")
+#         result[held[0]] = [range1[0].to_i, range1[1].to_i, range2[0].to_i, range2[1].to_i]
+#     end
+#     return result
+# end
+
+# def ticketChecker(data, rules, ticket)
+#     newData = []
+#     data.each do |ticket|
+#         result = 0
+#         ticket = ticket.split(',').map!{|el| el.to_i}
+#         ticket.each do |number|
+#             if number < 25 || number > 972
+#                 result += 1
+#                 break
+#             end
+#         end
+#         newData << ticket if result == 0
+#     end
+#     positions = ruleChecker(newData, rules)
+#     result = 1
+#     positions.each do |k, v|
+#         if k.include?("departure")
+#             result *= ticket[v]
+#         end
+#     end
+#     return result
+# end
+
+# def ruleChecker(data, rules)
+#     notValid = Hash.new { |h, k| h[k] = Set[] }
+#     result = {}
+#     rules = formater(rules)
+#     data.each do |ticket|
+#         ticket.each_with_index do |num, idx|
+#             rules.each do |rule, limits|
+#                 if num < limits[0] || (num > limits[1] && num < limits[2]) || num > limits[3]
+#                     notValid[rule] << idx
+#                 end
+#             end
+#         end
+#     end
+#     while result.length < 19
+#         notValid.each do |k, v|
+#            if v.length == 19
+#               (0..19).each do |num|
+#                 if !v.include?(num)
+#                     result[k] = num
+#                     notValid.each do |k, v|
+#                         v << num
+#                     end
+#                 end
+#               end
+#             end
+#         end
+#     end
+#     return result
+# end
+
+# data = "".split("\n")
+# rules = "".split("\n")
+# ticket = [127,83,79,197,157,67,71,131,97,193,181,191,163,61,53,89,59,137,73,167]
+# puts ticketChecker(data, rules, ticket)
+# ticketChecker(data)
+
+
+
+
+###--------###
 ### DAY 15 ###
 ###--------###
 
