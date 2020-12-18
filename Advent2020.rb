@@ -3,13 +3,35 @@ require 'set'
 
 
 ###--------###
-### DAY 17 ###
+### DAY 18 ###
 ###--------###
 
+# class Integer
+#   def -(other)
+#    self * other
+#   end
+# end
+# total = 0
+# File.open('day18.txt', 'r').each do |line|
+#   total += eval(line.tr('*', '-'))
+# end
+# puts total
+
+# class Integer
+#   def **(other)
+#     self + other
+#   end
+# end
+# total = 0
+# File.open('day18.txt', 'r').each do |line|
+#   total += eval(line.gsub('+', '**'))
+# end
+# puts total
 
 
-
-
+###--------###
+### DAY 17 ###
+###--------###
 
 
 
@@ -347,8 +369,6 @@ require 'set'
 ###--------###
 ### DAY 11 ###
 ###--------###
-
-
 
 
 # def surround(data)
